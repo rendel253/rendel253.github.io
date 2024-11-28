@@ -6,8 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="style.scss">
   </head>
   <body>
+    <header>
+      <nav class="navigation">
+        <img
+          src="public/icons/logo.svg"
+          alt="company logo"
+        />
+        <div class="navigation__menu">
+          <img
+            src="public/icons/header-menu.svg"
+            alt="navigation menu"
+            class="navigation__logo"
+          />
+          <div class="navigation__links">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a class="navigation__link" href="#home">Home</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#about">About</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#services">Services</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+      </div>
+      </nav>
+    </header>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
