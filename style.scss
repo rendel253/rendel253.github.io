@@ -251,6 +251,95 @@
     }
 }
 
+.about-clients{
+    background-color: rgba(90, 152, 208, 1);
+    border-top-left-radius: 200px;
+    padding-bottom: 200px;
+
+    &__info {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__info__title {
+        font-family: 'Gilroy';
+        font-size: 36px;
+        line-height: 46px;
+        color: rgba(255, 255, 255, 1);
+        width: 223px;
+        margin-left: auto;
+    }
+
+    &__info__description {
+        font-family: 'Gilroy';
+        font-size: 16px;
+        line-height: 26px;
+        color: rgba(255, 255, 255, 1);
+        opacity: 60%;
+        width: 540px;
+        margin-right: auto;
+        margin-left: 9%;
+    }
+
+    &__grid {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(2, 1fr);   
+
+        width: 66%; 
+        height: 256px; 
+
+        margin-right: auto;
+        margin-left: auto;
+
+        position: relative;
+        margin-bottom: 100px;
+    }
+
+    &__item {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'Gilroy';
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff; 
+
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &__item--more {
+        color: #fff;
+        font-weight: bold;
+        background-color: rgba(31, 63, 104, 0.2);
+        position: relative;
+    }
+
+    &__item:first-child,
+    &__item:nth-child(4n+1) {
+        border-left: none;
+    }
+
+    &__item:last-child,
+    &__item:nth-child(4n) {
+        border-right: none;
+    }
+
+    &__item:nth-child(-n+4) {
+        border-top: none;
+    }
+
+    &__item:nth-last-child(-n+4) {
+        border-bottom: none;
+    }
+}
+
 @media (min-width: 1920px) {
     .navigation {
         width: 1520px;
