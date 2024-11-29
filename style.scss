@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Gallient';
+    src: url(./public/fonts/GallientRegular.ttf) format(ttf);
+    font-family: 'Gilroy';
+    src: url(./public/fonts/Gilroy.otf) format(otf);
+}
+
 .navigation {
     display: flex;
     width: 1250px;
@@ -6,6 +13,7 @@
     padding-top: 40px;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 100px;
 
     &__menu {
         position: relative;
@@ -45,7 +53,7 @@
 
     &__link {
         text-decoration: none;
-        color: #333;
+        color: rgb(0, 0, 0);
         font-size: 18px;
     }
 
@@ -55,5 +63,69 @@
 
     &__menu:hover &__links {
         display: block;
+    }
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.product-intro {
+    display: flex;
+    margin-left: 200px;
+    align-items: center;
+    position: relative;
+
+    &__titel  {
+        font-size: 64px;
+        font-family:'Gallient';
+        color: rgb(31, 63, 104);
+        line-height: 74px;
+        width: 520px;
+        font-weight: 400;
+    }
+
+    &__info {
+        font-family: 'Gilroy';
+        font-size: 22px;
+        color: rgb(31, 63, 104);
+        width: 460px;
+        opacity: 60%;
+        line-height: 26px;
+        margin-top: 30px;
+    }
+
+    &__button {
+        margin-top: 100px;
+        filter: drop-shadow(5px 10px 20px rgba(90, 152, 208, 1));
+    }
+
+    &__image { 
+        z-index: -1;
+        position: absolute;
+        left: calc(40%);
+    }
+
+    
+}
+
+.button {
+    font-family: "Gilroy";
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(90, 152, 208);
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 10px 50px 10px 50px;
+}
+
+@media (min-width: 1920px) {
+    .navigation {
+        width: 1520px;
+    }
+
+    .product-intro {
+        margin-left: 300px;
     }
 }
