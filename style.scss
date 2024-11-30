@@ -102,7 +102,7 @@
     padding-bottom: 200px;
 
     &__card {
-      padding: 48px;
+        padding: 48px;
         box-shadow: 5px 20px 50px rgba(16 112 177 / 20%);
         margin-left: auto;
     }
@@ -136,11 +136,11 @@
 }
 
 .card {
-  font-family: Gilroy, sans-serif;
+    font-family: Gilroy, sans-serif;
 
-  &__image {
-    margin: 0 auto 56px;
-  }
+    &__image {
+        margin: 0 auto 56px;
+    }
 
 &__title {
     font-size: 20px;
@@ -179,9 +179,9 @@
     font-weight: 600;
 }
 
-  &__link--right {
-      margin-left: 24px;
-  }
+    &__link--right {
+    margin-left: 24px;
+}
 
 }
 
@@ -191,7 +191,7 @@
             margin: 0 0 32px;
             text-align: left;
         }
-        
+
         &__description {
             margin: 0 0 74px;
             text-align: left;
