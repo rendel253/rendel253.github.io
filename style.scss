@@ -96,17 +96,15 @@
 }
 
 .product-cards {
-    width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
-    display: block;
+    max-width: 940px;
+    margin: 0 auto;
+    padding-top: 200px;
     padding-bottom: 200px;
 
     &__card {
-        width: 380px;
-        height: 537px;
-        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+      padding: 48px;
+        box-shadow: 5px 20px 50px rgba(16 112 177 / 20%);
+        margin-left: auto;
     }
 
     &__grid {
@@ -115,72 +113,76 @@
         grid-template-rows: auto auto; 
         gap: 100px; 
         align-items: center; 
+        margin-left: 80px; // ??
     }
 
     &__title {
         position: absolute;
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 36px;
         line-height: 46px;
-        color: rgba(49, 96, 153, 1);
-        width: 406px;
+        letter-spacing: 0.05em;
+        color: rgba(49 96 153 / 100%);
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        max-width: 359px;
         text-align: left;
-    }
-
-    &__image {
-        margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 40px;
-    }
-
-    &__info {
-        width: 270px;
-        height: 241px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    &__card-titel {
-        font-family: 'Gilroy';
-        font-size: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        color: rgba(31, 63, 104, 1);
-        text-align: left;
-        padding-bottom: 16px;
-    }
-
-    &__card-description {
-        font-family: 'Gilroy';
-        font-size: 16px;
-        color: rgba(31, 63, 104, 1);
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-        line-height: 26px;
-        padding-bottom: 24px;
-        opacity: 60%;
-    }
-
-    &__card-link {
-        display: flex;
-        font-family: "Gilroy";
-        text-decoration: none;
-        color: rgba(90, 152, 208, 1);
-        font-size: 20px;
-    }
-
-    &__card-link--right {
-        margin-left: 20px;
     }
 
     &__card--centered {
         grid-row: span 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         margin-left: auto;
     }
+}
+
+.card {
+  font-family: Gilroy, sans-serif;
+
+  &__image {
+    margin: 0 auto 56px;
+  }
+
+&__title {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(31 63 104 / 100%);
+    text-align: left;
+    margin-bottom: 16px;
+    text-wrap: initial;
+}
+
+&__description {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(31 63 104 / 100%);
+    text-align: left;
+    opacity: 0.6;
+}
+
+&__link {
+    display: flex;
+    text-decoration: none;
+    color: rgba(90 152 208 / 100%);
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    font-weight: 600;
+}
+
+  &__link--right {
+      margin-left: 24px;
+  }
+
 }
 
 @media screen and (width >= 1200px) {
@@ -189,7 +191,7 @@
             margin: 0 0 32px;
             text-align: left;
         }
-
+        
         &__description {
             margin: 0 0 74px;
             text-align: left;
@@ -209,4 +211,3 @@
         }
     }
 }
-
