@@ -1,166 +1,98 @@
 @font-face {
-    font-family: 'Gallient';
-    src: url('/fonts/GallientRegular.ttf') format('truetype'); /* Формат исправлен на 'truetype' */
-    font-weight: normal;
-    font-style: normal;
+    font-family: Galien;
+    src: url("./public/fonts/Galien Regular.woff") format(woff);
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    src: url('/fonts/Gilroy.otf') format('opentype'); /* Формат исправлен на 'opentype' */
-    font-weight: normal;
-    font-style: normal;
+    font-family: Gilroy;
+    src: url("./public/fonts/Gilroy-Regular.woff") format(woff);
 }
 
-.navigation {
-    display: flex;
-    width: 1250px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    justify-content: space-between;
-    align-items: center;
+.header {
+    padding: 40px 16px 0; 
 
-    &__menu {
-        position: relative;
+    &__content {
+        display: flex;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        align-items: center;
     }
-
-    &__logo {
-        padding: 10px;
-    }
-
-    &__links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: white;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        pointer-events: auto;
-    }
-    
-    &__list {
-        list-style: none;
-        margin: 0;
-        padding: 10px;
-    }
-
-    &__item {
-        margin-bottom: 10px;
-    }
-
-    &__item:last-child {
-        margin-bottom: 0;
-    }
-
-    &__link {
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        font-size: 18px;
-    }
-
-    &__link:hover {
-        color: #007BFF;
-    }
-
-    &__menu:hover &__links {
-        display: block;
-    }
-}
-
-.main {
-    width: 100%;
-    height: 100%;
 }
 
 .product-intro {
     position: relative;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    padding: 40px 20px;
+    padding: 100px 0 190px;
 
     &__content {
-        max-width: 650px;
-        margin-left: 200px;
-        margin-right: -200px; /* вот это значение можно подбирать для более точного эффекта переноса */
+        margin: 0 auto;
+        max-width: 940px;
     }
 
     &__title {
-        margin: 0 0 40px 0; /* на глаз */
-        max-width: 600px; /* нужно смотреть на макет */
-
+        margin: 0 auto 32px; 
+        max-width: 510px;
         font-size: 64px;
-        font-family:'Gallient';
+        font-family: Galien, sans-serif;
         line-height: 74px;
-        letter-spacing: 0.04em;
-        text-align: left;
+        letter-spacing: 0.05em;
+        text-align: center;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
-        color: rgb(31, 63, 104);
+        color: rgb(31 63 104);
     }
 
     &__description {
-        margin: 0 0 60px 0; /* на глаз */
-        max-width: 400px; /* нужно смотреть на макет */
-
-        font-family: Gilroy;
+        margin: 0 auto 74px; 
+        max-width: 425px; 
+        font-family: Gilroy, sans-serif;
         font-size: 16px;
         line-height: 26px;
         letter-spacing: 0.05em;
-        text-align: left;
+        text-align: center;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
         color: #1F3F68;
     }
 
     &__button {
-        box-shadow: 5px 10px 20px 0px #356EAD33;
+        margin: 0 auto 96px;
+        box-shadow: 5px 10px 20px 0 #356EAD33;
     }
 
     &__image { 
-        z-index: -1;
-        position: absolute;
-        left: calc(40%);
+        width: 50%;
+        margin: 0 auto;
     }
-
-    
 }
 
 .product-intro::after {
     content: '';
-    
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-    
-    opacity: 20%;
-    background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%);
+    opacity: 0.2;
+    background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152 195 232 / 0%) 31.12%);
 }
 
 .button {
+    display: block;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     width: 220px;
     height: 56px;
-    font-family: Gilroy;
+    font-family: Gilroy, sans-serif;
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.04em;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: rgb(255, 255, 255);
-    background: rgba(90, 152, 208, 1);
+    color: rgb(255 255 255);
+    background: rgba(90 152 208 / 100%);
 }
 
 .product-cards {
@@ -251,12 +183,30 @@
     }
 }
 
-@media (min-width: 1920px) {
-    .navigation {
-        width: 1520px;
-    }
-
+@media screen and (width >= 1200px) {
     .product-intro {
-        margin-left: 300px;
+        &__title {
+            margin: 0 0 32px;
+            text-align: left;
+        }
+
+        &__description {
+            margin: 0 0 74px;
+            text-align: left;
+        }
+
+        &__button {
+            margin: 0;
+        }
+
+        &__image {
+            position: absolute;
+            top: 0;
+            right: 24px;
+            width: 50%;
+            margin: 0;
+            max-width: 687px;
+        }
     }
 }
+
