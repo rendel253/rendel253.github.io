@@ -1,6 +1,16 @@
+@font-face {
+    font-family: Galien;
+    src: url("./public/fonts/Galien Regular.woff") format(woff);
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url("./public/fonts/Gilroy-Regular.woff") format(woff);
+}
+
 .header {
     padding: 40px 16px 0; 
-  
+
     &__content {
         display: flex;
         max-width: 1200px;
@@ -9,4 +19,106 @@
         justify-content: space-between;
         align-items: center;
     }
-  }
+}
+
+.product-intro {
+    position: relative;
+    padding: 100px 0 190px;
+
+    &__content {
+        margin: 0 auto;
+        max-width: 940px;
+    }
+
+    &__title {
+        margin: 0 auto 32px; 
+        max-width: 510px;
+        font-size: 64px;
+        font-family: Galien, sans-serif;
+        line-height: 74px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgb(31 63 104);
+    }
+
+    &__description {
+        margin: 0 auto 74px; 
+        max-width: 425px; 
+        font-family: Gilroy, sans-serif;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #1F3F68;
+    }
+
+    &__button {
+        margin: 0 auto 96px;
+        box-shadow: 5px 10px 20px 0 #356EAD33;
+    }
+
+    &__image { 
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+.product-intro::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152 195 232 / 0%) 31.12%);
+}
+
+.button {
+    display: block;
+    border: none;
+    border-radius: 10px;
+    width: 220px;
+    height: 56px;
+    font-family: Gilroy, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgb(255 255 255);
+    background: rgba(90 152 208 / 100%);
+}
+
+@media screen and (width >= 1200px) {
+    .product-intro {
+        &__title {
+            margin: 0 0 32px;
+            text-align: left;
+        }
+
+        &__description {
+            margin: 0 0 74px;
+            text-align: left;
+        }
+
+        &__button {
+            margin: 0;
+        }
+
+        &__image {
+            position: absolute;
+            top: 0;
+            right: 24px;
+            width: 50%;
+            margin: 0;
+            max-width: 687px;
+        }
+    }
+}
+
