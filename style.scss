@@ -136,7 +136,7 @@
 }
 
 .about-clients{
-    background-color: rgba(90 15, 208 / 100%);
+    background-color: rgba(90 15 208 / 100%);
     border-top-left-radius: 200px;
     padding-bottom: 200px;
 
@@ -224,46 +224,46 @@
         margin: 0 auto 56px;
     }
 
-&__title {
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.05em;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: rgba(31 63 104 / 100%);
-    text-align: left;
-    margin-bottom: 16px;
-    text-wrap: initial;
-}
+    &__title {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(31 63 104 / 100%);
+        text-align: left;
+        margin-bottom: 16px;
+        text-wrap: initial;
+    }
 
-&__description {
-    margin-bottom: 32px;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.05em;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: rgba(31 63 104 / 100%);
-    text-align: left;
-    opacity: 0.6;
-}
+    &__description {
+        margin-bottom: 32px;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(31 63 104 / 100%);
+        text-align: left;
+        opacity: 0.6;
+    }
 
-&__link {
-    display: flex;
-    text-decoration: none;
-    color: rgba(90 152 208 / 100%);
-    font-size: 14px;
-    line-height: 30px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    font-weight: 600;
-}
+    &__link {
+        display: flex;
+        text-decoration: none;
+        color: rgba(90 152 208 / 100%);
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        font-weight: 600;
+    }
 
-    &__link--right {
-    margin-left: 24px;
-}
+        &__link--right {
+        margin-left: 24px;
+    }
 
 }
 
