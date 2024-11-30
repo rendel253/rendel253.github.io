@@ -5,63 +5,16 @@
     src: url(./public/fonts/Gilroy.otf) format(otf);
 }
 
-.navigation {
-    display: flex;
-    width: 1250px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    justify-content: space-between;
-    align-items: center;
+.header {
+    padding: 40px 16px 0; 
 
-    &__menu {
-        position: relative;
-    }
-
-    &__logo {
-        padding: 10px;
-    }
-
-    &__links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: white;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        pointer-events: auto;
-    }
-    
-    &__list {
-        list-style: none;
-        margin: 0;
-        padding: 10px;
-    }
-
-    &__item {
-        margin-bottom: 10px;
-    }
-
-    &__item:last-child {
-        margin-bottom: 0;
-    }
-
-    &__link {
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        font-size: 18px;
-    }
-
-    &__link:hover {
-        color: #007BFF;
-    }
-
-    &__menu:hover &__links {
-        display: block;
+    &__content {
+        display: flex;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -157,9 +110,6 @@
 }
 
 @media (min-width: 1920px) {
-    .navigation {
-        width: 1520px;
-    }
 
     .product-intro {
         margin-left: 300px;
