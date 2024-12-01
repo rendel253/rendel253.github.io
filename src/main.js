@@ -30,7 +30,13 @@ class ModalWindow {
                     <button type="submit" class="button input__button">Submit</button>
                 </form>
             </div>
-        </div>`;
+        </div>
+            <div class="popup-overlay hidden" id="popup">
+            <div class="popup">
+                <h3>Your message successfully sent</h3>
+            </div>
+        </div>
+        `;
 
         document.body.insertAdjacentHTML('beforeend', modalHTML);
 
@@ -43,6 +49,7 @@ class ModalWindow {
         this.name = document.getElementById('name');
         this.messageErrorEmail = document.getElementById('messageErrorEmail');
         this.messageErrorName = document.getElementById('messageErrorName');
+        this.popup = document.getElementById("popup");
     }
 
     openModal() {
@@ -72,9 +79,15 @@ class ModalWindow {
     handleEvent(event) {
         if (event.target === this.buttonOpen) {
             this.openModal();
+            return;
         }
-        else if (event.target === this.buttonClose || !this.modalContent.contains(event.target)) {
+        if (event.target === this.buttonClose || !this.modalContent.contains(event.target)) {
             this.closeModal();
+            return;
+        }
+        if (event.target === this.popup) {
+            this.closePopup();
+            return;
         }
     }
 
@@ -84,6 +97,7 @@ class ModalWindow {
         this.contactForm.addEventListener('submit', this.handleSubmit.bind(this));
         this.email.addEventListener('input', this.validator.handleInput.bind(this.validator, this.email, this.messageErrorEmail));
         this.name.addEventListener('input', this.validator.handleInput.bind(this.validator, this.name, this.messageErrorName));
+        this.popup.addEventListener('click', this);
     }
 
     async handleSubmit(event) {
@@ -97,16 +111,21 @@ class ModalWindow {
 
         const response = await this.formHandler.sendForm();
 
-        this.showFormMessage(response.success);
+        this.showPopup(response.success);
     }
 
-    showFormMessage(success) {
-        if (success) {
-            console.log('Form submitted successfully!');
-            this.closeModal();
-        } else {
-            console.log('There was an error submitting the form.');
+    showPopup(isSucces) {
+        if (isSucces) {
+            this.popup.classList.remove("hidden")
         }
+        
+        this.closePopup();
+    }
+
+    closePopup() {
+        setTimeout(() => {
+            this.popup.classList.add("hidden");
+        }, 2000);
     }
 }
 
@@ -172,13 +191,8 @@ class FormValidator {
 }
 
 class FormHandler {
-
     async sendForm() {
-        let response = await fetch('http://localhost:5173/', {
-            method: 'POST',
-            body: new FormData(this.form),
-        });
-
+        const response = await fetch('http://94.241.173.93:4225/send-message');
         return await response.json();
     }
 }
