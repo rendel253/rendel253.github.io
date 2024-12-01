@@ -221,24 +221,20 @@
 .footer {
     margin-right: 8%;
     border-top-right-radius: 200px;
-    background-color: rgba(49, 96, 153, 1);
+    background-color: rgba(49 96 153 / 100%);
     padding-bottom: 60px;
 
     &-head {
         width: 100%;
-        
-        border-bottom: #fff;
+        border-bottom: rgba(255 255 255 / 100%);
     }
 
     &-head__content {
         display: flex;
         align-items: center;
-        
         width: 1073px;
-
         height: 400px;
-
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        border-bottom: 1px solid rgba(255 255 255 / 40%);
     }
 
     &__info {
@@ -248,23 +244,19 @@
     }
 
     &__title {
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 36px;
         line-height: 46px;
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255 255 255 / 100%);
         margin-bottom: 30px;
     }
 
     &__description {
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 16px;
         line-height: 26px;
-        opacity: 60%;
-        color: rgba(255, 255, 255, 1);
-    }
-
-    &__button {
-        
+        opacity: 0.6;
+        color: rgba(255 255 255 / 100%);
     }
 
     &-content__container {
@@ -274,10 +266,7 @@
 
     &__content {
         display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
-        margin-bottom: 50px;
+        margin: 100px auto 50px;
     }
 
     &__contacts {
@@ -286,13 +275,12 @@
     }
 
     &__section {
-        
         max-width: 300px;
         margin: 20px 100px 20px 20px;
     }
 
     &__section:last-child {
-        margin-right: 0px;
+        margin-right: 0;
     }
 
     &__section--contact {
@@ -311,10 +299,10 @@
     }
 
     &__brand--title {
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 28px;
         line-height: 46px;
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255 255 255 / 100%);
     }
 
     &__contact-list {
@@ -323,11 +311,11 @@
     }
 
     &__contact-item {
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 16px;
         line-height: 26px;
         margin-bottom: 10px;
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255 255 255 / 100%);
     }
 
     &__contact-container {
@@ -335,19 +323,18 @@
     }
 
     &__contact-label {
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 16px;
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255 255 255 / 100%);
         line-height: 26px;
-
         margin-right: 26px;
     }
 
     &__title--about {
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 20px;
         line-height: 30px;
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255 255 255 / 100%);
         margin-bottom: 30px;
     }
 
@@ -357,18 +344,18 @@
     }
 
     &__item {
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 16px;
         line-height: 26px;
         margin-bottom: 10px;
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255 255 255 / 100%);
     }
 
     &__title--social {
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 20px;
         line-height: 30px;
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255 255 255 / 100%);
         margin-bottom: 30px;
     }
 
@@ -377,11 +364,11 @@
     }
 
     &__bottom--info {
-        font-family: 'Gilroy';
+        font-family: Gilroy, sans-serif;
         font-size: 16px;
         line-height: 26px;
-        color: rgba(255, 255, 255, 1);
-        opacity: 40%;
+        color: rgba(255 255 255 / 100%);
+        opacity: 0.4;
     }
 }
 
