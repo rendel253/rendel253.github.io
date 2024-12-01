@@ -487,9 +487,9 @@
     }
 }
 
-    .hidden {
-        display: none;
-    }
+.hidden {
+    display: none;
+}
 
 .input {
     border: 1px solid rgba(53 110 173 / 40%);
@@ -522,7 +522,6 @@
         width: 428px;
         height: 56px;
     }
-
 }
 
 ::placeholder {
@@ -533,6 +532,18 @@
     letter-spacing: 0.04em;
 }
 
+.input-error {
+    border: 2px solid rgb(247 1 1);
+}
+
+.message-input-error {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.message-error {
+    color: red;
+}
 
 @media screen and (width >= 1200px) {
     .product-intro {
