@@ -44,7 +44,7 @@
     }
 
     &__description {
-        margin: 0 auto 74px; 
+        margin: 0 auto 75px; 
         max-width: 425px; 
         font-family: Gilroy, sans-serif;
         font-size: 16px;
@@ -98,26 +98,36 @@
 .product-cards {
     max-width: 940px;
     margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 192px;
+    padding-bottom: 212px;
 
     &__card {
         padding: 48px;
         box-shadow: 5px 20px 50px rgba(16 112 177 / 20%);
-        margin-left: auto;
+        border-radius: 10px;
+        grid-column: 4;
+
+        &--first {
+            grid-row: span 3;
+        }
+
+        &--second {
+            grid-column: 2 / 3;
+            grid-row: 3 / span 3;
+        }
+
+        &--third {
+            grid-row: 5 / span 2;
+        }
     }
 
     &__grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: auto auto; 
-        gap: 100px; 
-        align-items: center; 
-        margin-left: 80px; // ??
+        grid-template-columns: 80px 1fr 100px 1fr;
+        grid-template-rows: auto 158px auto 100px 196px;
     }
 
     &__title {
-        position: absolute;
         font-family: Gilroy, sans-serif;
         font-size: 36px;
         line-height: 46px;
@@ -127,11 +137,8 @@
         text-decoration-skip-ink: none;
         max-width: 359px;
         text-align: left;
-    }
-
-    &__card--centered {
-        grid-row: span 2;
-        margin-left: auto;
+        text-wrap: initial;
+        grid-column: 1 / span 2;
     }
 }
 
@@ -339,6 +346,8 @@
 
     &__link {
         display: flex;
+        align-items: center;
+        column-gap: 24px;
         text-decoration: none;
         color: rgba(90 152 208 / 100%);
         font-size: 14px;
@@ -349,11 +358,6 @@
         text-decoration-skip-ink: none;
         font-weight: 600;
     }
-
-        &__link--right {
-        margin-left: 24px;
-    }
-
 }
 
 .footer-contacts {
@@ -452,7 +456,7 @@
         }
 
         &__description {
-            margin: 0 0 74px;
+            margin: 0 0 75px;
             text-align: left;
         }
 
