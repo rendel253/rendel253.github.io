@@ -1,3 +1,5 @@
+import './style.scss';
+
 class ModalWindow {
     constructor() {
         this.scrollY = 0;
