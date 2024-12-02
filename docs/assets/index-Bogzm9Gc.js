@@ -1,0 +1,29 @@
+var l=o=>{throw TypeError(o)};var u=(o,t,e)=>t.has(o)||l("Cannot "+e);var r=(o,t,e)=>t.has(o)?l("Cannot add the same private member more than once"):t instanceof WeakSet?t.add(o):t.set(o,e);var c=(o,t,e)=>(u(o,t,"access private method"),e);(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))n(s);new MutationObserver(s=>{for(const i of s)if(i.type==="childList")for(const a of i.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&n(a)}).observe(document,{childList:!0,subtree:!0});function e(s){const i={};return s.integrity&&(i.integrity=s.integrity),s.referrerPolicy&&(i.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?i.credentials="include":s.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function n(s){if(s.ep)return;s.ep=!0;const i=e(s);fetch(s.href,i)}})();class h{async sendForm(){return await(await fetch("http://94.241.173.93:4225/send-message")).json()}}class p{constructor(){this.validate=this.validate.bind(this)}checkIsEmpty(t){return t.value.trim().length===0}handleInput(t,e){e.classList.remove("hidden"),t.classList.remove("input-error"),e.textContent=""}checkEmailPattern(t){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t.value)}validateEmailAndApplyError(t,e){return this.checkIsEmpty(t)?(e.classList.remove("hidden"),e.textContent="Поле обязательно для заполнения",e.classList.add("message-error"),t.classList.add("input-error"),!1):this.checkEmailPattern(t)?!0:(e.classList.remove("hidden"),t.classList.add("input-error"),e.textContent="Введите действительный адрес электронной почты",e.classList.add("message-error"),console.log(t.value),!1)}validateNameAndApplyError(t,e){return this.checkIsEmpty(t)?(e.classList.remove("hidden"),e.textContent="Поле обязательно для заполнения",e.classList.add("message-error"),t.classList.add("input-error"),!1):!0}validate(){const t=this.validateEmailAndApplyError(document.getElementById("email"),document.getElementById("messageErrorEmail")),e=this.validateNameAndApplyError(document.getElementById("name"),document.getElementById("messageErrorName"));return t&&e}}var d,m;class y{constructor(){r(this,d);this.scrollY=0,this.createModal(),this.validator=new p,this.formHandler=new h(this.contactForm),c(this,d,m).call(this)}createModal(){document.body.insertAdjacentHTML("beforeend",` 
+        <div id="modal" class="hidden">
+            <div class="modal__content" id="modalContent">
+                <div class="modal__head"> 
+                    <h2 class="modal__title">SEND US A MESSAGE</h2>
+                    <button id="closeModal" class="modal__close-button">×</button>
+                </div>
+                <form id="contactForm" novalidate>
+                    <label for="name" class="input__title">Full Name</label>
+                    <input type="text" id="name" placeholder="Your Name" class="input">
+                    <div class="hidden" id="messageErrorName"></div>
+
+                    <label for="email" class="input__title">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" class="input">
+                    <div class="hidden" id="messageErrorEmail"></div>
+
+                    <label for="message" class="input__title">Message</label>
+                    <textarea id="message" placeholder="Your Message" class="input__textarea"></textarea>
+
+                    <button type="submit" class="button input__button">Submit</button>
+                </form>
+            </div>
+        </div>
+            <div class="popup-overlay hidden" id="popup">
+            <div class="popup">
+                <h3>Your message successfully sent</h3>
+            </div>
+        </div>
+        `),this.modal=document.getElementById("modal"),this.modalContent=document.getElementById("modalContent"),this.buttonClose=document.getElementById("closeModal"),this.buttonOpen=document.getElementById("openModal"),this.contactForm=document.getElementById("contactForm"),this.email=document.getElementById("email"),this.name=document.getElementById("name"),this.messageErrorEmail=document.getElementById("messageErrorEmail"),this.messageErrorName=document.getElementById("messageErrorName"),this.popup=document.getElementById("popup")}openModal(){this.scrollY=window.scrollY,document.body.style.position="fixed",document.body.style.top=`-${this.scrollY}px`,document.body.style.left="0",document.body.style.right="0",this.modal.classList.remove("hidden"),this.modal.classList.add("modal")}closeModal(){document.body.style.position="",document.body.style.top="",document.body.style.left="",document.body.style.right="",window.scrollTo(0,this.scrollY),this.modal.classList.remove("modal"),this.modal.classList.add("hidden")}handleEvent(t){if(t.target===this.buttonOpen){this.openModal();return}if(t.target===this.buttonClose||!this.modalContent.contains(t.target)){this.closeModal();return}if(t.target===this.popup){this.closePopup();return}}async handleSubmit(t){if(t.preventDefault(),!this.validator.validate())return;const n=await this.formHandler.sendForm();this.showPopup(n.success)}showPopup(t){t&&this.popup.classList.remove("hidden"),this.closePopup()}closePopup(){setTimeout(()=>{this.popup.classList.add("hidden")},2e3)}}d=new WeakSet,m=function(){this.buttonOpen.addEventListener("click",this),this.modal.addEventListener("click",this),this.contactForm.addEventListener("submit",this.handleSubmit.bind(this)),this.email.addEventListener("input",this.validator.handleInput.bind(this.validator,this.email,this.messageErrorEmail)),this.name.addEventListener("input",this.validator.handleInput.bind(this.validator,this.name,this.messageErrorName)),this.popup.addEventListener("click",this)};document.addEventListener("DOMContentLoaded",()=>{new y});
