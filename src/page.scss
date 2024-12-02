@@ -1,16 +1,16 @@
 @font-face {
     font-family: Galien;
     src: url("/fonts/Galien Regular.woff") format(woff);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Gilroy;
     src: url("/fonts/Gilroy-Regular.woff") format(woff);
-  }
-  
-  .header {
+}
+
+.header {
     padding: 40px 16px 0; 
-  
+
     &__content {
         display: flex;
         max-width: 1200px;
@@ -19,17 +19,17 @@
         justify-content: space-between;
         align-items: center;
     }
-  }
-  
-  .product-intro {
+}
+
+.product-intro {
     position: relative;
     padding: 50px 16px;
-  
+
     &__content {
         margin: 0 auto;
         max-width: 940px;
     }
-  
+
     &__title {
         margin: 0 auto 32px; 
         max-width: 510px;
@@ -42,7 +42,7 @@
         text-decoration-skip-ink: none;
         color: rgb(31 63 104);
     }
-  
+
     &__description {
         margin: 0 auto 75px; 
         max-width: 425px; 
@@ -55,20 +55,20 @@
         text-decoration-skip-ink: none;
         color: #1F3F68;
     }
-  
+
     &__button {
         margin: 0 auto 96px;
         box-shadow: 5px 10px 20px 0 #356EAD33;
     }
-  
+
     &__image { 
         width: 50%;
         margin: 0 auto;
         min-width: 280px;
     }
-  }
-  
-  .product-intro::after {
+}
+
+.product-intro::after {
     content: '';
     position: absolute;
     top: 0;
@@ -77,9 +77,9 @@
     height: 100%;
     opacity: 0.2;
     background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152 195 232 / 0%) 31.12%);
-  }
-  
-  .button {
+}
+
+.button {
     display: block;
     border: none;
     border-radius: 10px;
@@ -94,98 +94,98 @@
     text-decoration-skip-ink: none;
     color: rgb(255 255 255);
     background: rgba(90 152 208 / 100%);
-  }
-  
-  .product-cards {
+}
+
+.product-cards {
     max-width: 940px;
     margin: 0 auto;
     padding: 50px 16px;
-  
+
     &__grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 48px;
     }
-  
+
     &__title {
-      font-family: Gilroy, sans-serif;
-      font-size: 20px;
-      line-height: 30px;
-      letter-spacing: 0.05em;
-      color: rgba(49 96 153 / 100%);
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      max-width: 359px;
-      text-align: left;
-      text-wrap: initial;
-  }
-  
+        font-family: Gilroy, sans-serif;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        color: rgba(49 96 153 / 100%);
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        max-width: 359px;
+        text-align: left;
+        text-wrap: initial;
+    }
+
     &__card {
         padding: 48px;
         box-shadow: 5px 20px 50px rgba(16 112 177 / 20%);
         border-radius: 10px;
     }
-  }
-  
-  .card {
-  font-family: Gilroy, sans-serif;
-  
-  &__image {
-      margin: 0 auto 36px;
-  }
-  
-  &__title {
-      font-size: 18px;
-      line-height: 28px;
-      letter-spacing: 0.05em;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      color: rgba(31 63 104 / 100%);
-      text-align: left;
-      margin-bottom: 16px;
-      text-wrap: initial;
-  }
-  
-  &__description {
-      margin-bottom: 32px;
-      font-size: 14px;
-      line-height: 22px;
-      letter-spacing: 0.05em;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      color: rgba(31 63 104 / 100%);
-      text-align: left;
-      opacity: 0.6;
-  }
-  
-  &__link {
-      display: flex;
-      align-items: center;
-      column-gap: 24px;
-      text-decoration: none;
-      color: rgba(90 152 208 / 100%);
-      font-size: 14px;
-      line-height: 30px;
-      letter-spacing: 0.05em;
-      text-align: left;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      font-weight: 600;
-  }
-  }
-  
-  .about-clients {
+}
+
+.card {
+    font-family: Gilroy, sans-serif;
+
+    &__image {
+        margin: 0 auto 36px;
+    }
+    
+    &__title {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.05em;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(31 63 104 / 100%);
+        text-align: left;
+        margin-bottom: 16px;
+        text-wrap: initial;
+    }
+    
+    &__description {
+        margin-bottom: 32px;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(31 63 104 / 100%);
+        text-align: left;
+        opacity: 0.6;
+    }
+    
+    &__link {
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        text-decoration: none;
+        color: rgba(90 152 208 / 100%);
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        font-weight: 600;
+    }
+}
+
+.about-clients {
     background-color: rgba(90 152 208 / 100%);
     border-top-left-radius: 50px;
     padding: 50px 0 0;
-  
+
     &__content {
         max-width: 940px;
         margin: 0 auto;
         padding: 0 16px;
     }
-  
+
     &__info {
         display: flex;
         justify-content: space-between;
@@ -194,7 +194,7 @@
         max-width: 860px;
         margin-bottom: 56px;
     }
-  
+
     &__title {
         font-family: Gilroy, sans-serif;
         font-size: 20px;
@@ -204,7 +204,7 @@
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
     }
-  
+
     &__description {
         font-family: Gilroy, sans-serif;
         font-size: 14px;
@@ -224,7 +224,7 @@
         height: 256px; 
         margin-bottom: 62px;
     }
-  
+
     &__item {
         display: flex;
         justify-content: center;
@@ -239,23 +239,23 @@
         color: #fff; 
         border: 1px solid rgba(255 255 255 / 20%);
     }
-  
+
     &__item--more {
         background-color: rgba(31 63 104 / 20%);
     }
-  }
-  
-  .footer {
+}
+
+.footer {
     margin-right: 7%;
     border-top-right-radius: 50px;
     background-color: rgba(49 96 153 / 100%);
     padding: 48px 16px;
-  
+
     &__content {
         max-width: 940px;
         margin: 0 auto;
     }
-  
+
     &__top {
         position: relative;
         max-width: 860px;
@@ -267,7 +267,7 @@
         flex-wrap: wrap;
         gap: 24px;
     }
-  
+
     &__top::before {
         content: '';
         position: absolute;
@@ -278,11 +278,11 @@
         z-index: 1;
         bottom: 0;
     }
-  
+
     &__info {
         max-width: 290px;
     }
-  
+
     &__title {
         font-family: Gilroy, sans-serif;
         font-size: 20px;
@@ -294,7 +294,7 @@
         color: rgba(255 255 255 / 100%);
         margin-bottom: 32px;
     }
-  
+
     &__description {
         font-family: Gilroy, sans-serif;
         font-size: 14px;
@@ -306,7 +306,7 @@
         text-decoration-skip-ink: none;
         color: rgba(255 255 255 / 100%);
     }
-  
+
     &__nav {
         padding-top: 48px;
         display: flex;
@@ -316,12 +316,12 @@
         flex-wrap: wrap;
         gap: 48px 100px;
     }
-  
+
     &__bottom {
         max-width: 860px;
         margin: 0 auto;
     }
-  
+
     &__bottom--info {
         font-family: Gilroy, sans-serif;
         font-size: 16px;
@@ -333,18 +333,18 @@
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
     }
-  }
-  
-  .footer-contacts {
+}
+
+.footer-contacts {
     flex-direction: column;
     row-gap: 32px;
     display: flex;
-  
+
     &__header {
         display: flex;
         column-gap: 16px;
     }
-  
+
     &__title {
         font-family: Gilroy, sans-serif;
         font-size: 28px;
@@ -355,14 +355,14 @@
         text-decoration-skip-ink: none;
         color: rgba(255 255 255 / 100%);
     }
-  
+
     &__list {
         flex-direction: column;
         row-gap: 24px;
         display: flex;
         padding: 0;
     }
-  
+
     &__link {
         display: flex;
         max-width: 300px;
@@ -375,24 +375,24 @@
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
     }
-  
+
     &__prefix {
         width: 19px;
         flex-shrink: 0;
     }
-  }
-  
-  .footer-links {
+}
+
+.footer-links {
     display: flex;
     gap: 76px;
     flex-wrap: wrap;
-  
+
     &__section {
         flex-direction: column;
         row-gap: 32px;
         display: flex;
     }
-  
+
     &__title {
         font-family: Gilroy, sans-serif;
         font-size: 20px;
@@ -403,14 +403,14 @@
         text-decoration-skip-ink: none;
         color: rgba(255 255 255 / 100%);
     }
-  
+
     &__list {
         flex-direction: column;
         row-gap: 16px;
         display: flex;
         padding: 0;
     }
-  
+
     &__link {
         list-style: none;
         font-family: Gilroy, sans-serif;
@@ -422,29 +422,6 @@
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
     }
-}
-
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0 0 0 / 50%);
-    z-index: 1000;
-}
-
-.popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0 0 0 / 10%);
-    font-family: Gilroy, sans-serif;
-    color: rgba(31 63 104 / 100%); 
 }
 
 @media screen and (width < 768px) {
@@ -467,31 +444,6 @@
             border-bottom: none;
         }
     } 
-
-    .modal {
-        &__content {
-            padding: 16px;
-            max-width: 90%;
-        
-            &__title {
-            font-size: 18px;
-            line-height: 24px;
-            }
-        }
-    }
-
-    .input {
-        padding: 16px 24px;
-        font-size: 18px;
-    
-        &__textarea {
-            padding: 40px 24px;
-        }
-    
-        &__button {
-            height: 48px;
-        }
-    }
 }
 
 @media screen and (width >= 768px) {
