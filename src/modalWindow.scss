@@ -1,0 +1,105 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 50%);
+    z-index: 1000;
+  
+    &__head {
+        display: flex;
+    }
+  
+    &__title {
+        font-family: Gilroy, sans-serif;
+        color: rgba(31 63 104 / 100%);
+        text-align: left;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+    }
+  
+    &__content {
+        background: rgba(255 255 255 / 100%);
+        padding: 56px;
+        border-radius: 10px;
+        width: auto;
+        max-width: 100%;
+        text-align: center;
+    }
+  
+    &__close-button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .input {
+    border: 1px solid rgba(53 110 173 / 40%);
+    border-radius: 10px;
+    width: 428px;
+    max-width: 100%;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: Gilroy, sans-serif;
+  
+    &__title {
+        font-family: Gilroy, sans-serif;
+        color: rgba(31 63 104 / 80%);
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        display: block;
+        margin: 10px 0 5px;
+        text-align: left;
+    }
+  
+    &__textarea {
+        font-family: Gilroy, sans-serif;
+        border: 1px solid rgba(53 110 173 / 40%);
+        border-radius: 10px;
+        width: 428px;
+        max-width: 100%;
+        padding: 60px 30px;
+        margin-bottom: 72px;
+    }
+  
+    &__button {
+        width: 428px;
+        max-width: 100%;
+        height: 56px;
+    }
+  }
+  
+  ::placeholder {
+    font-family: Gilroy, sans-serif;
+    color: rgba(31 63 104 / 20%);
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+  }
+  
+  .input-error {
+    border: 2px solid rgb(247 1 1);
+  }
+  
+  .message-input-error {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  
+  .message-error {
+    color: rgb(247 1 1);
+  }
